@@ -1,4 +1,3 @@
-import psutil
 import time
 import threading
 from pynput import keyboard
@@ -6,6 +5,7 @@ import tkinter as tk
 from tkinter import ttk
 import sys
 import os
+import psutil
 
 KEY_PRESS_DELAY = 0.05
 TRIGGER_KEY = 'o'
@@ -13,19 +13,21 @@ INITIAL_DELAY_SECONDS = 0.1
 DEFAULT_FIXED_SECOND_KEY = 'g'
 KEY_MAP = {
     'escape': keyboard.Key.esc,
+    # 'f4' : keyboard.Key.f4,
 }
 
 def is_minecraft_running():
     minecraft_process_names = [
         "javaw.exe",  # Common for Minecraft Java Edition
         "minecraft.windows.exe", # For Minecraft Bedrock Edition (Windows 10/11)
+        
+        # Can include any other Launchers
     ]
     for proc in psutil.process_iter(['name']):
         try:
             if proc.info['name'].lower() in minecraft_process_names:
                 return True
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
-            # Handle cases where process is gone, access denied, or a zombie
             continue
     return False
 
@@ -87,9 +89,7 @@ def on_release(key):
     pass
 
 if __name__ == "__main__":
-    # Check if Minecraft is running
     if not is_minecraft_running():
-        # If Minecraft is not running, create a simple error GUI and exit
         error_root = tk.Tk()
         error_root.title("Error")
         error_root.geometry("300x100")
@@ -102,9 +102,8 @@ if __name__ == "__main__":
 
         print("Error: Minecraft is not running. Please open Minecraft first.")
         error_root.mainloop()
-        sys.exit(1) # Exit the script
+        sys.exit(1)
 
-    # If Minecraft is running, proceed with the main GUI setup
     root = tk.Tk()
     root.title("Minecraft F3 Shortcut Helper")
 
@@ -117,7 +116,7 @@ if __name__ == "__main__":
     root.grid_rowconfigure(3, weight=1)
     root.grid_columnconfigure(0, weight=1)
 
-    f3_keys = ['A', 'B', 'C', 'D', 'G', 'H', 'Q', 'I', 'N', 'P', 'T', 'Escape']
+    f3_keys = ['A', 'B', 'C', 'D', 'G', 'H', 'Q', 'I', 'N', 'P', 'T', 'Escape'] # '1', '2', '3', '4', '5', '6', '7', '8', '9', 
     selected_key_var = tk.StringVar(root)
 
     key_label = ttk.Label(root, text="Select F3 Combination Key:")
