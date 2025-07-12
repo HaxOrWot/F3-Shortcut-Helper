@@ -4,3 +4,4 @@ A Simple Application, Which helps the 60% Keyboard users to use the F3 shortcuts
 ![buttons]()
 
 Download [Here](https://github.com/HaxOrWot/F3-Shortcut-Helper/releases/tag/minecraft)
+<img width="349" height="214" alt="Desktop Screenshot 2025 07 12 - 17 06 20 46" src="https://github.com/user-attachments/assets/c3685bb9-be9c-4a34-8e84-f847fa9a5624" />
