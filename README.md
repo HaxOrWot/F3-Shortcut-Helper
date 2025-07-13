@@ -5,4 +5,6 @@ A Simple Application, Which helps the 60% Keyboard users to use the F3 shortcuts
 
 > <img width="349" height="214" alt="Desktop Screenshot 2025 07 12 - 17 06 20 46" src="https://github.com/user-attachments/assets/c3685bb9-be9c-4a34-8e84-f847fa9a5624" />
 
-## Download [F3Helper](https://github.com/HaxOrWot/F3-Shortcut-Helper/releases/download/minecraft/F3Helper.exe)
+> [!NOTE] 
+> ## Download [F3Helper](https://github.com/HaxOrWot/F3-Shortcut-Helper/releases/download/minecraft/F3Helper.exe)
+> Working on it, too make it more immersive
