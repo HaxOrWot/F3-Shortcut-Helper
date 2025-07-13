@@ -7,4 +7,4 @@ A Simple Application, Which helps the 60% Keyboard users to use the F3 shortcuts
 
 > [!NOTE] 
 > ## Download [F3Helper](https://github.com/HaxOrWot/F3-Shortcut-Helper/releases/download/minecraft/F3Helper.exe)
-> Working on it, too make it more immersive
+> Working on it, to make it more immersive
